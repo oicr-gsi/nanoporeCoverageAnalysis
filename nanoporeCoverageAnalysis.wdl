@@ -37,7 +37,7 @@ workflow nanoporeCoverageAnalysis {
     File depth500000window = coverageAnalysis.depth500000window
     File plotDepth = coverageAnalysis.plotDepth
     File plotSmall = coverageAnalysis.plotSmall
-    File plotLarg = coverageAnalysis.plotLarge
+    File plotLarge = coverageAnalysis.plotLarge
     Array[File] plotDepthChrms = coverageAnalysis.plotDepthChrms
         }
 
@@ -59,7 +59,7 @@ workflow nanoporeCoverageAnalysis {
         depth500000window: "output from rule run_coverage_analysis of the original workflow",
         plotDepth: "output from rule run_coverage_analysis of the original workflow",
         plotSmall: "output from rule run_coverage_analysis of the original workflow",
-        plotLarg: "output from rule run_coverage_analysis of the original workflow",
+        plotLarge: "output from rule run_coverage_analysis of the original workflow",
         plotDepthChrms: "output from rule run_coverage_analysis of the original workflow"
      }
     }
