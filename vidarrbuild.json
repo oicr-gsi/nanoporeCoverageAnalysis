@@ -1,0 +1,6 @@
+{
+    "names": [
+        "nanoporeCoverageAnalysis"
+    ],
+    "wdl": "nanoporeCoverageAnalysis.wdl"
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "TEST_MMinden_9161_FASTQ_INPUT",
+    "description": "runs the nanoporeCoverageAnalysis workflow, with nanopore fastq as input",
+    "arguments": {
+      "nanoporeCoverageAnalysis.sample": "MMinden_9161",
+      "nanoporeCoverageAnalysis.tumor": "MMinden_9161",
+      "nanoporeCoverageAnalysis.normal": "MMinden_9161",
+      "nanoporeCoverageAnalysis.samplefile": "/.mounts/labs/gsiprojects/gsi/nanopore_data/MMinden_9161/MMinden_9161/fastq/MMinden_9161.fastq.gz",
+      "nanoporeCoverageAnalysis.smkConfig.generateConfig_modules": "nanopore-sv-analysis/20220505",
+      "nanoporeCoverageAnalysis.smkConfig.generateConfig.jobMemory": null,
+      "nanoporeCoverageAnalysis.smkConfig.generateConfig.timeout":null, 
+      "nanoporeCoverageAnalysis.coverageAnalysis.modules": "nanopore-sv-analysis/20220505",
+      "nanoporeCoverageAnalysis.coverageAnalysis.timeout": null,
+      "nanoporeCoverageAnalysis.coverageAnalysis.jobMemory": null   
+    },
+    "engineArguments": {
+      "write_to_cache": false,
+      "read_from_cache": false
+    },
+    "metadata": {
+        "nanoporeCoverageAnalysis.depth100window": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.depth1000window": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.depth10000window": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.depth100000window": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.depth500000window": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.plotDepth": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.plotSmall": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.plotLarge": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          },
+          "nanoporeCoverageAnalysis.plotDepthChrms": {
+            "contents": [
+              {
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+              }
+            ],
+            "type": "ALL"
+          }
+   },
+    "validators": [
+      {
+        "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+        "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporeRunSVAnalysis/output_expectation/coverageAnalysis_MMinden_9161_FASTQ.metrics",
+        "type": "script"
+      }
+    ]
+  }
+]
