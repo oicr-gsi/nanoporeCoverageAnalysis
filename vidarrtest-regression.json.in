@@ -5,7 +5,7 @@
     "arguments": {
 	"nanoporeCoverageAnalysis.samplefile": {
         "contents": {
-            "configuration": "/.mounts/labs/gsiprojects/gsi/nanopore_data/MMinden_9161/MMinden_9161/fastq/MMinden_9161.fastq",
+            "configuration": "/.mounts/labs/gsi/testdata/nanoporeCoverageAnalysis/input_data/MMinden_9161.fastq",
             "externalIds": [
                 {
                     "id": "TEST",
@@ -106,7 +106,7 @@
       {
         "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
         "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporeRunSVAnalysis/output_expectation/coverageAnalysis_MMinden_9161_FASTQ.metrics",
+        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporeCoverageAnalysis/output_expectation/coverageAnalysis_MMinden_9161_FASTQ.metrics",
         "type": "script"
       }
     ]
