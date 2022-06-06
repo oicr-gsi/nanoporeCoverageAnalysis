@@ -20,7 +20,7 @@
       "nanoporeCoverageAnalysis.normal": "MMinden_9161",
       "nanoporeCoverageAnalysis.smkConfig.generateConfig_jobMemory": null,
       "nanoporeCoverageAnalysis.smkConfig.generateConfig_timeout":null, 
-      "nanoporeCoverageAnalysis.coverageAnalysis.modules": "nanopore-sv-analysis/20220505",
+      "nanoporeCoverageAnalysis.coverageAnalysis.modules": "conda/4.11.0",
       "nanoporeCoverageAnalysis.coverageAnalysis.timeout": null,
       "nanoporeCoverageAnalysis.coverageAnalysis.jobMemory": null   
     },
