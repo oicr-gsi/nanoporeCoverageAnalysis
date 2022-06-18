@@ -18,8 +18,8 @@
       "nanoporeCoverageAnalysis.sample": "MMinden_9161",
       "nanoporeCoverageAnalysis.tumor": "MMinden_9161",
       "nanoporeCoverageAnalysis.normal": "MMinden_9161",
-      "nanoporeCoverageAnalysis.smkConfig.generateConfig_jobMemory": null,
-      "nanoporeCoverageAnalysis.smkConfig.generateConfig_timeout":null, 
+      "nanoporeCoverageAnalysis.generateConfig.jobMemory": null,
+      "nanoporeCoverageAnalysis.generateConfig.timeout":null, 
       "nanoporeCoverageAnalysis.coverageAnalysis.modules": "conda/4.11.0",
       "nanoporeCoverageAnalysis.coverageAnalysis.timeout": null,
       "nanoporeCoverageAnalysis.coverageAnalysis.jobMemory": null   
