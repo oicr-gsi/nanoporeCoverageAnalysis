@@ -5,4 +5,4 @@ set -euo pipefail
 cd $1
 
 #find all bed  files, return their md5sums 
-find  -name '*.bed' -xtype f -exec sh -c "cat {} | grep -v ^# | md5sum" \; 
+find  -name '*.bed' -xtype f -exec sh -c "cat {} | grep -v ^# | md5sum" \; |sort 
