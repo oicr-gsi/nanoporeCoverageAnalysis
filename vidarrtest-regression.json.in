@@ -3,14 +3,24 @@
     "id": "TEST_MMinden_9161_FASTQ_INPUT",
     "description": "runs the nanoporeCoverageAnalysis workflow, with nanopore fastq as input",
     "arguments": {
+	"nanoporeCoverageAnalysis.samplefile": {
+        "contents": {
+            "configuration": "/.mounts/labs/gsi/testdata/nanoporeCoverageAnalysis/input_data/MMinden_9161.fastq",
+            "externalIds": [
+                {
+                    "id": "TEST",
+                    "provider": "TEST"
+                }
+            ]
+        },
+        "type": "EXTERNAL"
+      },
       "nanoporeCoverageAnalysis.sample": "MMinden_9161",
       "nanoporeCoverageAnalysis.tumor": "MMinden_9161",
       "nanoporeCoverageAnalysis.normal": "MMinden_9161",
-      "nanoporeCoverageAnalysis.samplefile": "/.mounts/labs/gsiprojects/gsi/nanopore_data/MMinden_9161/MMinden_9161/fastq/MMinden_9161.fastq.gz",
-      "nanoporeCoverageAnalysis.smkConfig.generateConfig_modules": "nanopore-sv-analysis/20220505",
-      "nanoporeCoverageAnalysis.smkConfig.generateConfig_jobMemory": null,
-      "nanoporeCoverageAnalysis.smkConfig.generateConfig_timeout":null, 
-      "nanoporeCoverageAnalysis.coverageAnalysis.modules": "nanopore-sv-analysis/20220505",
+      "nanoporeCoverageAnalysis.generateConfig.jobMemory": null,
+      "nanoporeCoverageAnalysis.generateConfig.timeout":null, 
+      "nanoporeCoverageAnalysis.coverageAnalysis.modules": "conda/4.11.0",
       "nanoporeCoverageAnalysis.coverageAnalysis.timeout": null,
       "nanoporeCoverageAnalysis.coverageAnalysis.jobMemory": null   
     },
@@ -96,7 +106,7 @@
       {
         "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
         "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporeRunSVAnalysis/output_expectation/coverageAnalysis_MMinden_9161_FASTQ.metrics",
+        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporeCoverageAnalysis/output_expectation/coverageAnalysis_MMinden_9161_FASTQ.metrics",
         "type": "script"
       }
     ]
