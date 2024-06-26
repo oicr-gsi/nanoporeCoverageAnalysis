@@ -45,18 +45,50 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`depth100window`|File|output from rule run_coverage_analysis of the original workflow
-`depth1000window`|File|output from rule run_coverage_analysis of the original workflow
-`depth10000window`|File|output from rule run_coverage_analysis of the original workflow
-`depth100000window`|File|output from rule run_coverage_analysis of the original workflow
-`depth500000window`|File|output from rule run_coverage_analysis of the original workflow
-`plotDepth`|File|output from rule run_coverage_analysis of the original workflow
-`plotSmall`|File|output from rule run_coverage_analysis of the original workflow
-`plotLarge`|File|output from rule run_coverage_analysis of the original workflow
-`plotDepthChrms`|Array[File]|output from rule run_coverage_analysis of the original workflow
+Output | Type | Description | Labels
+---|---|---|---
+`depth100window`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: depth100window
+`depth1000window`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: depth1000window
+`depth10000window`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: depth10000window
+`depth100000window`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: depth100000window
+`depth500000window`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: depth500000window
+`plotDepth`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: plotDepth
+`plotSmall`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: plotSmall
+`plotLarge`|File|output from rule run_coverage_analysis of the original workflow|vidarr_label: plotLarge
+`plotDepthChrms`|Array[File]|output from rule run_coverage_analysis of the original workflow|vidarr_label: plotDepthChrms
 
+
+## Commands
+This section lists command(s) run by nanoporeCoverageAnalysis workflow
+ 
+* Running nanoporeCoverageAnalysis
+ 
+### Configure
+ 
+```
+         set -euo pipefail
+         cat <<EOT >> config.yaml
+         workflow_dir: "/.mounts/labs/gsi/modulator/sw/Ubuntu18.04/nanopore-sv-analysis-20220505"
+         conda_dir: "/.mounts/labs/gsi/modulator/sw/Ubuntu18.04/nanopore-sv-analysis-20220505/bin"
+         reference_dir: "/.mounts/labs/gsi/modulator/sw/data/hg38-nanopore-sv-reference-20220505"
+         samples: [~{sample}]
+         normals: [~{normal}]
+         tumors: [~{tumor}]
+         ~{sample}: ~{samplefile}
+         EOT
+```
+ 
+### Run as a snakemake process
+ 
+```
+         module load nanopore-sv-analysis
+         unset LD_LIBRARY_PATH
+         set -euo pipefail
+         cp $NANOPORE_SV_ANALYSIS_ROOT/Snakefile .
+         cp ~{config} .
+         $NANOPORE_SV_ANALYSIS_ROOT/bin/snakemake --jobs 16 --rerun-incomplete --keep-going --latency-wait 60 --cluster "qsub -cwd -V -o snakemake.output.log -e snakemake.error.log  -P gsi -pe smp {threads} -l h_vmem={params.memory_per_thread} -l h_rt={params.run_time} -b y "  run_coverage_analysis
+ 
+```
 
 ## Support
 
