@@ -54,17 +54,44 @@ workflow nanoporeCoverageAnalysis {
         url: "https://gitlab.oicr.on.ca/ResearchIT/modulator/-/blob/master/data/gsi/50_hg38_nanopore_sv_reference.yaml"
       }
      ]
-     output_meta: {
-        depth100window: "output from rule run_coverage_analysis of the original workflow",
-        depth1000window: "output from rule run_coverage_analysis of the original workflow",
-        depth10000window: "output from rule run_coverage_analysis of the original workflow",
-        depth100000window: "output from rule run_coverage_analysis of the original workflow",
-        depth500000window: "output from rule run_coverage_analysis of the original workflow",
-        plotDepth: "output from rule run_coverage_analysis of the original workflow",
-        plotSmall: "output from rule run_coverage_analysis of the original workflow",
-        plotLarge: "output from rule run_coverage_analysis of the original workflow",
-        plotDepthChrms: "output from rule run_coverage_analysis of the original workflow"
-     }
+    output_meta: {
+    depth100window: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "depth100window"
+    },
+    depth1000window: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "depth1000window"
+    },
+    depth10000window: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "depth10000window"
+    },
+    depth100000window: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "depth100000window"
+    },
+    depth500000window: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "depth500000window"
+    },
+    plotDepth: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "plotDepth"
+    },
+    plotSmall: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "plotSmall"
+    },
+    plotLarge: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "plotLarge"
+    },
+    plotDepthChrms: {
+        description: "output from rule run_coverage_analysis of the original workflow",
+        vidarr_label: "plotDepthChrms"
+    }
+}
     }
 }
 
