@@ -1,11 +1,11 @@
 [
   {
-    "id": "TEST_MMinden_9161_FASTQ_INPUT",
+    "id": "TEST_MMinden_FASTQ_INPUT",
     "description": "runs the nanoporeCoverageAnalysis workflow, with nanopore fastq as input",
     "arguments": {
 	"nanoporeCoverageAnalysis.samplefile": {
         "contents": {
-            "configuration": "/.mounts/labs/gsi/testdata/nanoporeCoverageAnalysis/input_data/MMinden_9161.fastq",
+            "configuration": "/.mounts/labs/gsi/testdata/nanoporecoverageanalysis/test_inputs/MMinden_Test.fastq",
             "externalIds": [
                 {
                     "id": "TEST",
@@ -15,9 +15,9 @@
         },
         "type": "EXTERNAL"
       },
-      "nanoporeCoverageAnalysis.sample": "MMinden_9161",
-      "nanoporeCoverageAnalysis.tumor": "MMinden_9161",
-      "nanoporeCoverageAnalysis.normal": "MMinden_9161",
+      "nanoporeCoverageAnalysis.sample": "MMinden_Test",
+      "nanoporeCoverageAnalysis.tumor": "MMinden_Test",
+      "nanoporeCoverageAnalysis.normal": "MMinden_Test",
       "nanoporeCoverageAnalysis.generateConfig.jobMemory": null,
       "nanoporeCoverageAnalysis.generateConfig.timeout":null, 
       "nanoporeCoverageAnalysis.coverageAnalysis.modules": "conda/4.11.0",
@@ -32,7 +32,7 @@
         "nanoporeCoverageAnalysis.depth100window": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -40,7 +40,7 @@
           "nanoporeCoverageAnalysis.depth1000window": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -48,7 +48,7 @@
           "nanoporeCoverageAnalysis.depth10000window": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -56,7 +56,7 @@
           "nanoporeCoverageAnalysis.depth100000window": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -64,7 +64,7 @@
           "nanoporeCoverageAnalysis.depth500000window": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -72,7 +72,7 @@
           "nanoporeCoverageAnalysis.plotDepth": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -80,7 +80,7 @@
           "nanoporeCoverageAnalysis.plotSmall": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -88,7 +88,7 @@
           "nanoporeCoverageAnalysis.plotLarge": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -96,7 +96,7 @@
           "nanoporeCoverageAnalysis.plotDepthChrms": {
             "contents": [
               {
-                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_9161_FASTQ_INPUT@JENKINSID@"
+                "outputDirectory": "@SCRATCH@/@DATE@_Workflow_nanoporeCoverageAnalysis_TEST_MMinden_FASTQ_INPUT@JENKINSID@"
               }
             ],
             "type": "ALL"
@@ -106,7 +106,7 @@
       {
         "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
         "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporeCoverageAnalysis/output_expectation/coverageAnalysis_MMinden_9161_FASTQ.metrics",
+        "output_metrics": "/.mounts/labs/gsi/testdata/nanoporecoverageanalysis/output_metrics/workflow_test_01.metrics",
         "type": "script"
       }
     ]
